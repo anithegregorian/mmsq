@@ -42,3 +42,11 @@ This will generate media query CSS for both `ipad` and `smartphone`. You can use
 - gt-ipad-lt-desktop
 - desktop-large
 - desktop-xlarge
+
+# Usage
+
+Just use `@import "mmsq"` in your SCSS file.
+
+# Dependencies
+
+MMSQ is dependent on [sass-mediaqueries](https://github.com/paranoida/sass-mediaqueries) library by [Rafal Bromirski](https://github.com/paranoida)
