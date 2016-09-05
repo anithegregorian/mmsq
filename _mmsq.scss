@@ -1,0 +1,147 @@
+//
+// Package Name: Multiple Media Size Query
+// Package URI: http://www.ravendevelopers.com
+// Subpackage: Stylesheet
+// Author: Anirudh Mahant
+// Author URI: http://www.ravendevelopers.com
+// Description: Multiple media size query.
+// Version: 1.0
+// License: Creative Commons 3.0 Attribution
+// License URI: https://creativecommons.org/licenses/by/3.0/us/
+// Tags: scss, media, query
+//
+
+@import "media-queries";
+
+@mixin is-media($collection: (
+			smartphone,
+			smartphone-portrait,
+			smartphone-landscape,
+			ipad,
+			ipad-portrait,
+			ipad-landscape,
+			ipad-retina,
+			ipad-retina-portrait,
+			ipad-retina-landscape,
+			ipad-mini,
+			ipad-mini-portrait,
+			ipad-mini-landscape,
+			iphone4,
+			iphone4-portrait,
+			iphone4-landscape,
+			iphone5,
+			iphone5-portrait,
+			iphone5-landscape,
+			iphone6,
+			iphone6-portrait,
+			iphone6-landscape,
+			desktop,
+			gt-ipad-lt-desktop,
+			desktop-large,
+			desktop-xlarge,
+		)
+	){
+	@each $media in $collection{
+		@if $media == smartphone{
+			@include screen(320px, 640px){
+				@content;
+			}
+		} @else if $media == smartphone-portrait{
+			@include screen(320px, 640px, portrait){
+				@content;
+			}
+		} @else if $media == smartphone-landscape{
+			@include screen(321px, 640px, landscape){
+				@content;
+			}
+		} @else if $media == ipad{
+			@include ipad(){
+				@content;
+			}
+		} @else if $media == ipad-portrait{
+			@include ipad(portrait){
+				@content;
+			}
+		} @else if $media == ipad-landscape{
+			@include ipad(landscape){
+				@content;
+			}
+		} @else if $media == ipad-retina{
+			@include ipad-retina(){
+				@content;
+			}
+		} @else if $media == ipad-retina-portrait{
+			@include ipad-retina(portrait){
+				@content;
+			}
+		} @else if $media == ipad-retina-landscape{
+			@include ipad-retina(landscape){
+				@content;
+			}
+		} @else if $media == iphone4{
+			@include iphone4(){
+				@content;
+			}
+		} @else if $media == iphone4-portrait{
+			@include iphone4(portrait){
+				@content;
+			}
+		} @else if $media == iphone4-landscape{
+			@include iphone4(landscape){
+				@content;
+			}
+		} @else if $media == iphone5{
+			@include iphone5(){
+				@content;
+			}
+		} @else if $media == iphone5-portrait{
+			@include iphone5(portrait){
+				@content;
+			}
+		} @else if $media == iphone5-landscape{
+			@include iphone5(landscape){
+				@content;
+			}
+		} @else if $media == iphone6{
+			@include iphone6(){
+				@content;
+			}
+		} @else if $media == iphone6-portrait{
+			@include iphone6(portrait){
+				@content;
+			}
+		} @else if $media == iphone6-landscape{
+			@include iphone6(landscape){
+				@content;
+			}
+		} @else if $media == desktop{
+			@include min-screen(1190px){
+				@content;
+			}
+		} @else if $media == gt-ipad-lt-desktop{
+			@include screen(1025px, 1279px) {
+				@content;
+			}
+		} @else if $media == desktop-large{
+			@include min-screen(1224px){
+				@content;
+			}
+		} @else if $media == desktop-xlarge{
+			@include min-screen(1824px){
+				@content;
+			}
+		} @else if $media == ipad-mini{
+			@include screen(641px, 1024px){
+				@content;
+			}
+		} @else if $media == ipad-mini-portrait{
+			@include screen(641px, 1024px, portrait){
+				@content
+			}
+		} @else if $media == ipad-mini-landscape{
+			@include screen(641px, 1024px, landscape){
+				@content
+			}
+		}
+	}
+}
