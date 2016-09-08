@@ -1,5 +1,5 @@
 # MMSQ
-Multiple media size query is a SASS mixin library for querying multiple media sizes in a single line. Instead of writing mltiple lines of code for each media size use `mmsq` to simplify your workflow.
+Multiple media size query is a SASS mixin library for querying multiple media sizes at once. Instead of writing mltiple lines of code for each media size use `mmsq` to simplify your workflow.
 
 # Examples
 
